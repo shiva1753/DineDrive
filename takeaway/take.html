@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeaway</title>
+    <link rel="stylesheet" href="take.css" />
+</head>
+
+<body>
+    <div class="header">
+        <a href="/index.html">
+            <p class="logo">DineDrive</p>
+        </a>
+        
+    </div>
+
+    <div class="container">
+        <div class="box1">
+            <label for="timeInput">Enter Time:</label>
+            <input type="time" id="timeInput">
+        </div>
+
+        <div class="box2">
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="More Spice" value="More Spice"> More Spice </td>
+                    <td><input type="checkbox" name="check2" value="Normal" >Normal</td>
+                  <td><input type="checkbox" name="check3" value="Less Spice" >Less Spice</td>
+                </tr>
+                
+                <tr>
+                  <td><input type="checkbox" name="check4" value="More Salty">More Salty</td>
+                  <td><input type="checkbox" name="check5" value="Normal"> Normal </td>
+                  <td><input type="checkbox" name="check6" value="check6">Less Salty</td>
+                </tr>
+                <tr>
+                  <td colspan="3"><input type="text" name="textbox" placeholder="other changes"></td>
+                </tr>
+              </table>
+        </div>
+        <div class="box3">
+            <h3>Payment Mode:</h3>
+            <input type="checkbox" id="cash" name="paymentMode" value="Cash">
+            <label for="cash"> Cash</label><br>
+            <input type="checkbox" id="card" name="paymentMode" value="Card">
+            <label for="card"> Card</label><br>
+            <input type="checkbox" id="online" name="paymentMode" value="Online">
+            <label for="online"> Online</label><br>
+        </div>
+    </div>
+    <div class="proceeddiv">
+        <button class="proceed">Proceed</button>
+    </div>
+
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeaway</title>
+    <link rel="stylesheet" href="take.css" />
+    <script>
+        window.onload = function () {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    if (this.checked) {
+                        checkboxes.forEach(function (otherCheckbox) {
+                            if (otherCheckbox !== checkbox && otherCheckbox.name === checkbox.name) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/index.html">
+            <p class="logo">DineDrive</p>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="box1">
+            <label for="timeInput">Enter Time:</label>
+            <input type="time" id="timeInput">
+        </div>
+
+        <div class="box2">
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="spice" value="More Spice" checked> More Spice </td>
+                    <td><input type="checkbox" name="spice" value="Normal">Normal</td>
+                    <td><input type="checkbox" name="spice" value="Less Spice">Less Spice</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="salty" value="More Salty">More Salty</td>
+                    <td><input type="checkbox" name="salty" value="Normal" checked> Normal </td>
+                    <td><input type="checkbox" name="salty" value="Less Salty">Less Salty</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" name="textbox" placeholder="other changes"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box3">
+            <h3>Payment Mode:</h3>
+            <input type="checkbox" id="cash" name="paymentMode" value="Cash">
+            <label for="cash"> Cash</label><br>
+            <input type="checkbox" id="card" name="paymentMode" value="Card">
+            <label for="card"> Card</label><br>
+            <input type="checkbox" id="online" name="paymentMode" value="Online">
+            <label for="online"> Online</label><br>
+        </div>
+    </div>
+    <div class="proceeddiv">
+        <button class="proceed">Proceed</button>
+    </div>
+</body>
+
+</html>

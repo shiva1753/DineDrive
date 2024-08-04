@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine in</title>
+    <link rel="stylesheet" href="dine.css" />
+</head>
+
+<body>
+    <div class="header">
+        <p class="logo">DineDrive</p>
+    </div>
+
+    <div class="container">
+        <div class="box1">
+            <form>
+                <label class="guests" for="guests">Number of Guests:</label><br>
+                <div class="input-group">
+                    <button type="button" class="btn btn-minus" onclick="decrementGuests()">-</button>
+                    <input type="text" id="guests" value="0" readonly>
+                    <button type="button" class="btn btn-plus" onclick="incrementGuests()">+</button>
+                </div>
+            </form>
+            <script>
+                function incrementGuests() {
+                    var guests = document.getElementById("guests");
+                    guests.value = parseInt(guests.value) + 1;
+                }
+
+                function decrementGuests() {
+                    var guests = document.getElementById("guests");
+                    if (guests.value > 0) {
+                        guests.value = parseInt(guests.value) - 1;
+                    }
+                }
+            </script>
+
+            <label for="timeInput">Enter Time:</label>
+            <input type="time" id="timeInput">
+        </div>
+
+        <div class="box2">
+            <table>
+                <tr>
+                  <td><input type="checkbox" name="More Spice" value="More Spice" checked> More Spice </td>
+                  <td><input type="checkbox" name="check2" value="Normal">Normal</td>
+                  <td><input type="checkbox" name="check3" value="Less Spice">Less Spice</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check4" value="More Salty">More Salty</td>
+                  <td><input type="checkbox" name="check5" value="Normal" checked> Normal </td>
+                  <td><input type="checkbox" name="check6" value="check6">Less Salty</td>
+                </tr>
+                <tr>
+                  <td colspan="3"><input type="text" name="textbox" placeholder=""></td>
+                </tr>
+              </table>
+        </div>
+        <div class="box3">
+            <h3>Payment Mode:</h3>
+            <input type="checkbox" id="cash" name="paymentMode" value="Cash">
+            <label for="cash"> Cash</label><br>
+            <input type="checkbox" id="card" name="paymentMode" value="Card">
+            <label for="card"> Card</label><br>
+            <input type="checkbox" id="online" name="paymentMode" value="Online">
+            <label for="online"> Online</label><br>
+        </div>
+    </div>
+    <div class="proceeddiv">
+        <button class="proceed">Proceed</button>
+    </div>
+
+
+</body>
+
+</html>

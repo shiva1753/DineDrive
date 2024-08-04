@@ -1,0 +1,147 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F6BB;
+}
+
+
+.header {
+  background-color: #114232;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.box1 {
+  background-color: #F7F6BB;
+  color: #000000;
+  border: 2px solid #114232;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 30%;
+  
+}
+
+.box2 {
+  background-color: #F7F6BB;
+  border: 2px solid #114232;
+  border-radius: 8px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 30%;
+  
+}
+
+.box3 {
+  font-family: system-ui, sans-serif;
+
+  line-height: 1;
+  background-color: #F7F6BB;
+  border: 2px solid #114232;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+
+input[type="time"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+input[type="checkbox"] {
+  accent-color: #87A922;
+  margin-right: 10px;
+  appearance: none;
+  height: 25px;
+  width: 25px;
+  background-color: #333;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #87A922;
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .box1, .box2, .box3 {
+      width: 100%;
+  }
+}
+.proceed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  background-color: #87A922;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+
+
+}
+.proceed:hover{
+  background-color: #114232;
+  cursor:  pointer;
+
+}
